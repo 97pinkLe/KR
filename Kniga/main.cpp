@@ -17,7 +17,7 @@ int main() {
 			cout << "Выберите действие: ";
 				choice = _getch();
 
-		} while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != '6' && choice != '7');
+		} while (choice != '1' && choice != '2' && choice != '3' && choice != '4' && choice != '5' && choice != '6');
 
 		switch (choice) {
 		case '1': {

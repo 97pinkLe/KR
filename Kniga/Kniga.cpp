@@ -1,6 +1,5 @@
 #include "Kniga.h"
 #include <iostream>
-#include <vector>
 #include <fstream>
 
 using namespace std;
@@ -72,12 +71,12 @@ string* Book::find_event(const string& event_to_find, int& n_count) {
 		getline(file, one_event);
 		if (one_event.find(event_to_find) != -1) {
 			count++;
-			found_events_tmp = new string[count]; //копируем всё найденное
+			found_events_tmp = new string[count];
 				for (int i = 0; i < count - 1; i++) 
-					found_events_tmp[i] = found_events[i]; //добавление нового события
-				found_events_tmp[count - 1] = one_event;  //удаление старого содержимого
+					found_events_tmp[i] = found_events[i];
+				found_events_tmp[count - 1] = one_event;  
 				delete[] found_events;
-				found_events = found_events_tmp; //указание на новый массив
+				found_events = found_events_tmp; 
 		}
 	}
 	file.close();

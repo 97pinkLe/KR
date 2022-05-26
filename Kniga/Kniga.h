@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
@@ -54,7 +53,6 @@ public:
 	string* find_event(const string& event_to_find, int& n_count);
 	string* all_events(int& count);
 	void delete_event(string* all_events_arr, int count, int choice);
-	void sort();
 	void see_all_list();
 	void clean_list();
 };
