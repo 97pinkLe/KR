@@ -49,14 +49,14 @@ int main() {
 			system("cls");
 			int count = 0;
 			string* all_events_arr = b.all_events(count);
-			cout << "Все события: ";
+			cout << "Все события: "; 
 			for (int i = 0; i < count; i++)
 				cout << "[" << i + 1 << "]" << all_events_arr[i] << endl;
 			cout << "Какое событие хотите отредактировать? (номер): ";
 			int choice = 0;
 			cin >> choice;
-			cout << "Редактирование: " << endl;
 			b.delete_event(all_events_arr, count, choice);
+			a.SetEvent();
 			b.add_event();
 			cout << "Изменения внесены! " << endl;
 			delete[] all_events_arr;
@@ -90,7 +90,6 @@ int main() {
 		}
 				break;
 		}
-
 		cout << endl << " Хотите продолжить работу? (1 - да, 0 - нет)" << endl;
 		fflush(stdin);
 		exit = _getch();

@@ -115,6 +115,7 @@ string* Book::all_events(int& n_count) {
 }
 
 void Book::delete_event(string* all_events_arr, int count, int choice) {
+	setlocale(0, "rus");
 	ofstream file("list.txt");
 	if (!file.is_open()) {
 		cout << "Error: File is not opened";
@@ -128,6 +129,7 @@ void Book::delete_event(string* all_events_arr, int count, int choice) {
 	file.close();
 }
 void Book::clean_list() {
+	setlocale(0, "rus");
 	fstream file("list.txt", ios::out | ios::trunc);
 	if (!file.is_open()) {
 		cout << "Error: File is not opened";
@@ -136,34 +138,5 @@ void Book::clean_list() {
 	file.close();
 }
 
-void Book::sort() {
-	ifstream file("list.txt");
-	int n = 0;
-		string* s_events = new string[100];
-		while (!file.eof()) {
-			getline(file, s_events[n]);
-			n += 1;
-	}
-		string temp = " ";
-		for (int i = 0; i < n - 2; i++) {
-			for (int j = i + 1; j < n - 1; j++) {
-				if (s_events[i][0] >= s_events[j][0]) {
-					temp = s_events[i];
-					s_events[i] = s_events[j];
-					s_events[j] = temp;
-				}
-			}
-		}
-		file.close();
-		ofstream ofile("list.txt", ofstream::trunc);
-		for (int i = 0; i < n; i++) {
-			if (i == n - 1)
-				ofile << s_events[i];
-			else
-				ofile << s_events[i];
-		}
-		ofile.close();
-		delete[] s_events;
-}
-	
+
 

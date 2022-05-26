@@ -22,7 +22,6 @@ public:
 	string GetEvent() {
 		return event;
 	}
-
 	void SetDate() {
 		string DATE;
 		getline(cin, DATE);
@@ -31,7 +30,6 @@ public:
 	string GetDate() {
 		return date;
 	}
-
 	void SetAdress() {
 		string ADRESS;
 		getline(cin, ADRESS);
@@ -40,7 +38,6 @@ public:
 	string GetAdress() {
 		return adress;
 	}
-
 	void SetContacts() {
 		string CONTACTS;
 		getline(cin, CONTACTS);
